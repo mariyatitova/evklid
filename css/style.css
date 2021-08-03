@@ -525,7 +525,7 @@ ul {
 
 .textarea__input {
   margin-bottom: 32px;
-  padding: 14px 447px 104px 24px;
+  padding: 14px 0 104px 24px;
 }
 .textarea:hover {
   background-color: #666666;
