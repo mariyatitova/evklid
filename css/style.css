@@ -274,6 +274,8 @@ nav {
 
 .cards svg {
   margin-right: 50px;
+  width: 190px;
+  height: 165px;
 }
 
 .cards:not(:last-child) {
@@ -608,11 +610,14 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   max-width: 570px;
 }
 
 
  input[type="button"] {
+   margin-right: 22px;
+   margin-bottom: 10px;
    padding: 19px 52px;
    background: var(--FF9900);
    font-family: Montserrat;
@@ -627,7 +632,7 @@ input {
   font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 0.8vw;
   line-height: 32px;
   color: var(--CACACA);
 
@@ -692,6 +697,38 @@ input {
   margin-bottom: 20px;
 }
 
+@media   (max-width: 1374px){
+  .section-title{
+    font-size: 47px;
+  }
+
+  .header-nav {
+    font-size: 15px;
+  }
+  .cards {
+    justify-content: space-evenly;
+  }
+  .about-cards {
+    flex-direction: column;
+    max-width: 1300px;
+  }
+
+  .about-img-card, .about-cards__cards {
+    width: 100%;
+  }
+
+
+  .about-img-card {
+    padding-top: 444px;
+    margin-bottom: 32px;
+  }
+
+  .form-button-text {
+    font-size: 16px;
+  }
+
+}
+
 @media (max-width: 1024px) {
   .container {
     padding-left: 50px;
@@ -708,6 +745,10 @@ input {
   .burger {
     display: block;
   }
+
+   .section-title {
+     font-size: 45px;
+   }
 
   .header-content {
     width: 22px;
@@ -800,20 +841,17 @@ input {
     max-width: 261px;
     font-size: 14px;
   }
-}
-
-@media  (max-width: 1786px){
-  .form-button-text {
-    font-size: 14px;
-  }
-}
-@media  (max-width: 1684px){
-  .form-button-text {
-    font-size: 13px;
-}
 
 }
+
 @media (max-width: 992px) {
+  .about-working-info__paragraph {
+    width: 48%;
+  }
+
+  .about-working-info {
+    background-size: 48% 100%;
+  }
   .form-button-text {
     font-size: 13px;
   }
@@ -904,7 +942,7 @@ input {
   }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 565px) {
   .section-main-info__title {
     font-size: 31px;
     text-align: center;
