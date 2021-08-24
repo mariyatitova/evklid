@@ -10,7 +10,6 @@
   --black: #000000;
 }
 .container {
-  max-width: 1770px;
   margin: 0 auto;
   padding-right: 75px;
   padding-left: 75px;
@@ -32,6 +31,22 @@
   align-items: center;
   width: 50%;
   max-width: 814px;
+}
+.menu{
+  /*display: none;*/
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 400px;
+  padding: 40px;
+  background-color: black;
+  transition: transform .3s ease-in-out;
+  transform: translateX(101%);
+}
+.menu.is-active{
+  transform: none;
 }
 .burger {
   display: none;
@@ -686,6 +701,10 @@ input {
     display: none;
   }
 
+  /*menu {*/
+  /*  display: block;*/
+  /*}*/
+
   .burger {
     display: block;
   }
@@ -778,12 +797,29 @@ input {
   }
 
   .form-button-text {
-    max-width: 261px
+    max-width: 261px;
+    font-size: 14px;
+  }
+}
+
+@media  (max-width: 1786px){
+  .form-button-text {
+    font-size: 14px;
+  }
+}
+@media  (max-width: 1684px){
+  .form-button-text {
+    font-size: 13px;
+}
+
+}
+@media (max-width: 992px) {
+  .form-button-text {
+    font-size: 13px;
   }
 }
 
 @media (max-width: 768px) {
-
 
   .container {
     padding-right: 50px;
@@ -867,6 +903,250 @@ input {
     margin: 0;
   }
 }
+
+@media (max-width: 540px) {
+  .section-main-info__title {
+    font-size: 31px;
+    text-align: center;
+  }
+
+  .section-main-info__paragraph {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .main-info-btn {
+    padding: 14px 28px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    max-width: 162px;
+  }
+
+  .section-main-info {
+    margin-bottom: 60px;
+    padding: 60px 21px;
+    align-items: center;
+  }
+
+
+
+  .section-title {
+    font-size: 30px;
+    line-height: 29px;
+  }
+
+  .section-description {
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  .about-img-card {
+    padding-top: 330px;
+    background-image: url("../img/Rectangle 2 (1).png");
+    background-size: contain;
+  }
+
+  .about-img-card__description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: white;
+    opacity: 1;
+    padding: 0;
+  }
+
+  .description-paragraph {
+    margin-bottom: 15px;
+    width: 100%;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 28px;
+    color: #333333;
+  }
+
+  .about-btn {
+    padding: 11px 44px;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: #FF9900;
+  }
+
+  .about-btn:hover {
+    background: var(--FF9900);
+    color: var(--white);
+  }
+
+  .about-btn:focus {
+    background: var(--FF9900);
+    outline: none;
+    color: var(--white);
+  }
+
+  .about-btn:active {
+    background: var(--E1670E);
+    color: var(--white);
+    margin: 0;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    border: none;
+  }
+
+  .title-bold {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .section-paragraph {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 28px;
+    color: #333333;
+  }
+  .cards svg {
+    margin-bottom: 12px;
+    max-width: 64px;
+    max-height: 49px;
+  }
+
+  .about {
+    margin-bottom: 60px;
+  }
+
+  .about-working-step {
+    margin-bottom: 16px;
+  }
+
+  .about-working-step__link {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .about-working-step__link:not(:last-child) {
+    margin-right: 44px;
+  }
+
+  .about-working-info {
+    padding-top: 270px;
+    background-image: url("../img/Rectangle 18 (2).png");
+    background-size: contain;
+  }
+
+  .about-working-info__title {
+    margin-bottom: 16px;
+  }
+
+  .about-working-info-btn {
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+  }
+
+  .about-working-info-btn__details {
+    padding: 11px 44px 14px 45px;
+    margin-right: 6px;
+  }
+
+  .about-working-info-btn__contract {
+    padding: 10px 29px 13px 30px;
+  }
+
+  .about-working {
+    margin-bottom: 60px;
+  }
+
+  .questions-container {
+    padding: 30px 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #333333;
+    max-width: 540px;
+    background-image: url("../img/mini-plus.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  .questions {
+    margin-bottom: 60px;
+  }
+  .questions__title {
+    margin-bottom: 16px;
+  }
+
+  .questions-paragraph {
+    max-width: 400px;
+  }
+
+  .form-button {
+    flex-direction: column;
+    border-bottom: 1px solid #595959;
+    margin-bottom: 16px;
+  }
+
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 83px 0 144px;
+    width: 100%;
+    max-width: 153px;
+  }
+
+  input[type="button"] {
+    padding: 19px 38px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    margin-bottom: 11px;
+    margin-right: 0;
+  }
+  .form__textarea {
+    margin-bottom:25px;
+  }
+
+  .form-button-text {
+    margin-bottom: 16px;
+  }
+
+  .social-button {
+    padding: 0;
+  }
+
+  .footer-left-social-list {
+    justify-content: space-between;
+  }
+
+  .cards svg {
+    margin-bottom: 12px;
+    max-width: 74px;
+    max-height: 59px;
+  }
+
+  .questions-container:active {
+    background-image: url("../img/active.svg");
+    background-size: 30px 30px;
+  }
+
+  .questions-container:hover {
+    color: var(--FF9900);
+    border-color: var(--FF9900);
+    z-index: 1;
+    background-image: url("../img/orange-plus.svg");
+    background-size: 30px 30px;
+  }
+}
+
 
 @media (max-width: 450px) {
   .section-main-info__title {
@@ -1043,7 +1323,7 @@ input {
     font-size: 14px;
     line-height: 24px;
     color: #333333;
-    max-width: 401px;
+    /*max-width: 540px;*/
     background-image: url("../img/mini-plus.svg");
     background-repeat: no-repeat;
     background-position: right;
@@ -1057,7 +1337,7 @@ input {
   }
 
   .questions-paragraph {
-    max-width: 370px;
+    max-width: 540px;
   }
 
   .form-button {
@@ -1254,6 +1534,7 @@ input {
     line-height: 28px;
     color: #333333;
   }
+
   .cards svg {
     margin-bottom: 12px;
     max-width: 64px;
@@ -1317,11 +1598,12 @@ input {
     background-image: url("../img/mini-plus.svg");
     background-repeat: no-repeat;
     background-position: right;
-    }
+  }
 
   .questions {
     margin-bottom: 60px;
   }
+
   .questions__title {
     margin-bottom: 16px;
   }
@@ -1379,7 +1661,7 @@ input {
   }
 
   .form__textarea {
-    margin-bottom:25px;
+    margin-bottom: 25px;
   }
 
   .form-button-text {
@@ -1394,5 +1676,6 @@ input {
     justify-content: space-between;
   }
 }
+
 
 
